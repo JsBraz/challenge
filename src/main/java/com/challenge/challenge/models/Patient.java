@@ -24,6 +24,10 @@ public class Patient {
         this.age = age;
     }
 
+    public Patient() {
+        // Default constructor
+    }
+
     public Long getId() {
         return id;
     }

@@ -18,6 +18,10 @@ public class Doctor {
     @JoinColumn(name = "specialty_id")
     private Specialty specialty;
 
+    public Doctor() {
+
+    }
+
     public long getId() {
         return id;
     }
@@ -39,6 +43,11 @@ public class Doctor {
     }
 
     public void setSpecialty(Specialty specialty) {
+        this.specialty = specialty;
+    }
+
+    public Doctor(String name, Specialty specialty) {
+        this.name = name;
         this.specialty = specialty;
     }
 }

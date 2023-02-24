@@ -3,7 +3,8 @@ version: '3.9'
 services:
 
   server:
-    image: 'challenge-1.0.0.jar'
+    build: .
+    command: mvn clean verify
     ports:
       - "8080:8080"
     depends_on:
