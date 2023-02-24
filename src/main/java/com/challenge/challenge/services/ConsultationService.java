@@ -5,10 +5,8 @@ import com.challenge.challenge.models.Doctor;
 import com.challenge.challenge.models.Patient;
 import com.challenge.challenge.models.Specialty;
 import com.challenge.challenge.repository.ConsultationRepo;
-import com.challenge.challenge.repository.DoctorRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,9 +25,10 @@ public class ConsultationService {
 
 
     @Autowired
-    public ConsultationService(ConsultationRepo consultationRepo){
+    public ConsultationService(ConsultationRepo consultationRepo) {
         this.consultationRepo = consultationRepo;
     }
+
     public Iterable<Consultation> findAll() {
         return this.consultationRepo.findAll();
     }

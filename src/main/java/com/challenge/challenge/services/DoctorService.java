@@ -1,17 +1,14 @@
 package com.challenge.challenge.services;
 
 import com.challenge.challenge.models.Doctor;
-import com.challenge.challenge.models.Pathology;
 import com.challenge.challenge.models.Specialty;
 import com.challenge.challenge.repository.DoctorRepo;
-import com.challenge.challenge.repository.PathologyRepo;
 import com.challenge.challenge.repository.SpecialtyRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
-import javax.print.Doc;
 import java.util.Optional;
 
 @Service
@@ -23,9 +20,10 @@ public class DoctorService {
     private SpecialtyRepo specialtyRepo;
 
     @Autowired
-    public DoctorService(DoctorRepo doctorRepo){
+    public DoctorService(DoctorRepo doctorRepo) {
         this.doctorRepo = doctorRepo;
     }
+
     public Iterable<Doctor> findAll() {
         return this.doctorRepo.findAll();
     }
@@ -35,8 +33,8 @@ public class DoctorService {
     }
 
     public Optional<Doctor> createDoctor(Doctor doctor) {
-        Optional<Doctor> optionalDoctor= this.doctorRepo.findByName(doctor.getName());
-        if(optionalDoctor.isPresent()){
+        Optional<Doctor> optionalDoctor = this.doctorRepo.findByName(doctor.getName());
+        if (optionalDoctor.isPresent()) {
             return Optional.empty();
         }
         Doctor createdDoctor = this.doctorRepo.save(doctor);

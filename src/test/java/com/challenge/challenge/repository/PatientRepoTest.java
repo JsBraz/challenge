@@ -26,7 +26,7 @@ public class PatientRepoTest {
     @Test
     public void testFindByName() {
         // Arrange
-        Patient patient = new Patient("John",25);
+        Patient patient = new Patient("John", 25);
         patientRepo.save(patient);
 
         // Act
@@ -57,10 +57,10 @@ public class PatientRepoTest {
     //some issue with this test  left unresolved bue to time constraints
     public void testFindByNameContainingIgnoreCase() {
         // Arrange
-        Patient patient1 = new Patient("John",25);
+        Patient patient1 = new Patient("John", 25);
         patientRepo.save(patient1);
 
-        Patient patient2 = new Patient("Mark",30);
+        Patient patient2 = new Patient("Mark", 30);
         patientRepo.save(patient2);
 
         // Act
@@ -73,13 +73,13 @@ public class PatientRepoTest {
     @Test
     public void testFindByNameContainingIgnoreCaseAndAge() {
         // Arrange
-        Patient patient1 = new Patient("John",25);
+        Patient patient1 = new Patient("John", 25);
         patientRepo.save(patient1);
 
-        Patient patient2 = new Patient("Mary",25);
+        Patient patient2 = new Patient("Mary", 25);
         patientRepo.save(patient2);
 
-        Patient patient3 = new Patient("Mark",30);
+        Patient patient3 = new Patient("Mark", 30);
         patientRepo.save(patient3);
 
         // Act

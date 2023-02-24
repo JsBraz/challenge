@@ -15,9 +15,10 @@ public class PatientService {
     private PatientRepo patientRepo;
 
     @Autowired
-    public PatientService(PatientRepo patientRepo){
+    public PatientService(PatientRepo patientRepo) {
         this.patientRepo = patientRepo;
     }
+
     public Iterable<Patient> findAll(Pageable pageable) {
         return this.patientRepo.findAll();
     }
@@ -28,7 +29,7 @@ public class PatientService {
 
     public Optional<Patient> createPatient(Patient patient) {
         Optional<Patient> optionalPatient = this.patientRepo.findByName(patient.getName());
-        if(optionalPatient.isPresent()){
+        if (optionalPatient.isPresent()) {
             return Optional.empty();
         }
         Patient createdpatient = this.patientRepo.save(patient);
@@ -48,11 +49,11 @@ public class PatientService {
     }
 
     public Iterable<Patient> findByAge(int age, Pageable pageable) {
-        return patientRepo.findByAge(age,pageable);
+        return patientRepo.findByAge(age, pageable);
     }
 
     public Iterable<Patient> findByNameContainingIgnoreCaseAndAge(String name, int age, Pageable pageable) {
-        return patientRepo.findByNameContainingIgnoreCaseAndAge(name,age,pageable);
+        return patientRepo.findByNameContainingIgnoreCaseAndAge(name, age, pageable);
     }
 
     public Optional<Patient> updatePatient(Patient updatedPatient) {

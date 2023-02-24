@@ -1,11 +1,11 @@
 package com.challenge.challenge.controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.challenge.challenge.models.Consultation;
 import com.challenge.challenge.services.ConsultationService;
 import com.challenge.challenge.services.DoctorService;
 import com.challenge.challenge.services.PatientService;
 import com.challenge.challenge.services.SpecialtyService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,7 +14,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -23,7 +22,6 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.hamcrest.Matchers.hasSize;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 

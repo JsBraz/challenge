@@ -1,9 +1,7 @@
 package com.challenge.challenge.services;
 
 import com.challenge.challenge.models.Specialty;
-import com.challenge.challenge.models.Symptom;
 import com.challenge.challenge.repository.SpecialtyRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -23,7 +21,7 @@ public class SpecialtyService {
 
     public Optional<Specialty> createSpecialty(Specialty specialty) {
         Optional<Specialty> optionalSpecialty = this.specialtyRepo.findById(specialty.getId());
-        if(optionalSpecialty.isPresent()){
+        if (optionalSpecialty.isPresent()) {
             return Optional.empty();
         }
         Specialty createdSpecialty = this.specialtyRepo.save(specialty);

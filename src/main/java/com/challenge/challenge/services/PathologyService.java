@@ -12,9 +12,10 @@ public class PathologyService {
     private PathologyRepo pathologyRepo;
 
     @Autowired
-    public PathologyService(PathologyRepo pathologyRepo){
+    public PathologyService(PathologyRepo pathologyRepo) {
         this.pathologyRepo = pathologyRepo;
     }
+
     public Iterable<Pathology> findAll() {
         return this.pathologyRepo.findAll();
     }
@@ -25,7 +26,7 @@ public class PathologyService {
 
     public Optional<Pathology> createPathology(Pathology pathology) {
         Optional<Pathology> optionalPathology = this.pathologyRepo.findByName(pathology.getName());
-        if(optionalPathology.isPresent()){
+        if (optionalPathology.isPresent()) {
             return Optional.empty();
         }
         Pathology createdPathology = this.pathologyRepo.save(pathology);

@@ -1,9 +1,7 @@
 package com.challenge.challenge.controllers;
 
 import com.challenge.challenge.models.Pathology;
-import com.challenge.challenge.models.Patient;
 import com.challenge.challenge.models.Symptom;
-import com.challenge.challenge.repository.SymptomRepo;
 import com.challenge.challenge.services.PathologyService;
 import com.challenge.challenge.services.SymptomService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @Controller
-@RequestMapping( "/symptom")
+@RequestMapping("/symptom")
 public class SymptomController {
 
     @Autowired

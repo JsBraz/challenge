@@ -75,7 +75,7 @@ public class PatientController {
         if (existingPatient.isPresent()) {
             patient.setId(id);
             Optional<Patient> updatedPatient = patientService.createPatient(patient);
-            if(updatedPatient.isPresent()) {
+            if (updatedPatient.isPresent()) {
                 return ResponseEntity.ok(updatedPatient);
             }
         }
@@ -91,4 +91,4 @@ public class PatientController {
         patientService.deletePatient(patient);
         return ResponseEntity.ok().build();
     }
-    }
+}

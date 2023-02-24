@@ -68,8 +68,6 @@ public class ConsultationRepoTest {
         List<Consultation> consultations = consultationRepo.findByPatientId(1L);
         Assertions.assertEquals(3, consultations.size());
     }
-
-    //@Test
     public void testFindSpecialtiesWithMoreThan2Patients() {
         List<Object[]> result = consultationRepo.findSpecialtiesWithMoreThan2Patients();
         Assertions.assertEquals(3, result.size());

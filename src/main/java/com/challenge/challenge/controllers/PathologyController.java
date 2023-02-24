@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -22,14 +21,14 @@ public class PathologyController {
     @Autowired
     private PatientService patientService;
 
-   //retieve a pathology by it's ID
+    //retieve a pathology by it's ID
     @GetMapping("/pathology/{id}")
     public Optional<Pathology> getPathologyById(@PathVariable Long id) {
         return pathologyService.findById(id);
     }
 
 
-  //adds a pathology to a doctor
+    //adds a pathology to a doctor
     @PostMapping("/addPathology/{id}")
     public ResponseEntity<Pathology> addPathologyToPatient(@PathVariable Long id, @RequestBody Pathology pathology) {
         Optional<Patient> optionalPatient = patientService.findById(id);

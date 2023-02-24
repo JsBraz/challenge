@@ -1,6 +1,5 @@
 package com.challenge.challenge.services;
 
-import com.challenge.challenge.models.Pathology;
 import com.challenge.challenge.models.Symptom;
 import com.challenge.challenge.repository.SymptomRepo;
 import org.springframework.stereotype.Service;
@@ -26,7 +25,7 @@ public class SymptomService {
 
     public Optional<Symptom> createSymptom(Symptom symptom) {
         Optional<Symptom> optionalSymptom = this.symptomRepo.findByName(symptom.getName());
-        if(optionalSymptom.isPresent()){
+        if (optionalSymptom.isPresent()) {
             return Optional.empty();
         }
         Symptom createdSymptom = this.symptomRepo.save(symptom);

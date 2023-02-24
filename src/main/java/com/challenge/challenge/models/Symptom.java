@@ -4,7 +4,7 @@ package com.challenge.challenge.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name  = "symptom")
+@Table(name = "symptom")
 public class Symptom {
 
     @Id

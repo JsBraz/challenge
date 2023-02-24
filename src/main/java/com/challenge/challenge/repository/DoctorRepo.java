@@ -1,7 +1,6 @@
 package com.challenge.challenge.repository;
 
 import com.challenge.challenge.models.Doctor;
-import com.challenge.challenge.models.Pathology;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

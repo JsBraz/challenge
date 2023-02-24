@@ -1,4 +1,3 @@
-
 INSERT INTO public.patient(id, age, name)
 VALUES (1, 25, 'Manel');
 INSERT INTO public.patient(id, age, name)

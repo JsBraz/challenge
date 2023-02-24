@@ -24,6 +24,7 @@ public interface PatientRepo extends CrudRepository<Patient, Long> {
     Spring Data JPA will generate the appropriate SQL query based on the method name and parameters, and execute it against the database.
      */
     List<Patient> findByNameContainingIgnoreCase(String name, Pageable pageable);
+
     Page<Patient> findByNameContainingIgnoreCaseAndAge(String name, int age, Pageable pageable);
 
 

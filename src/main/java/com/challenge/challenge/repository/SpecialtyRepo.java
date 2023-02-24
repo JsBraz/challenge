@@ -1,6 +1,5 @@
 package com.challenge.challenge.repository;
 
-import com.challenge.challenge.models.Consultation;
 import com.challenge.challenge.models.Specialty;
 import org.springframework.data.repository.CrudRepository;
 

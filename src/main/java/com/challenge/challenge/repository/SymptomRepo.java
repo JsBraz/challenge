@@ -1,6 +1,5 @@
 package com.challenge.challenge.repository;
 
-import com.challenge.challenge.models.Patient;
 import com.challenge.challenge.models.Symptom;
 import org.springframework.data.repository.CrudRepository;
 
