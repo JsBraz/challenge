@@ -18,6 +18,10 @@ public class PatientController {
     @Autowired
     private PatientService patientService;
 
+    public PatientController(PatientService patientService) {
+        this.patientService = patientService;
+    }
+
 
     /*
     retrieves the data of all the patients with the requested features - REQUESTED ENDPOINT IN THE CHALLENGE
