@@ -16,6 +16,9 @@ public class Specialty {
     private long id;
     private String name;
 
+    public Specialty() {
+    }
+
     public long getId() {
         return id;
     }
